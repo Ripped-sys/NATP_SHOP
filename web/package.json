@@ -1,0 +1,18 @@
+{
+  "name": "natp-official-store",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.17.0 <23"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/index.mjs",
+    "test": "node --test tests/api.test.mjs",
+    "test:e2e": "playwright test",
+    "test:all": "npm test && npm run test:e2e"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1"
+  }
+}

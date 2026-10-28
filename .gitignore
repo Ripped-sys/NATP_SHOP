@@ -20,3 +20,11 @@
 *.keystore
 .env
 .env.*
+web/.data/
+web/test-results/
+web/playwright-report/
+web/.playwright-cli/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+!web/.env.example

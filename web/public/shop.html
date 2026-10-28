@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05060a">
+  <meta name="description" content="NATP 内网穿透官方周边展示：服饰、音乐、吉他周边与配件。当前为模拟购物演示，不接受真实付款。">
+  <title>NATP STORE / 内网穿透官方周边</title>
+  <link rel="icon" href="./assets/logo.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./shop.css">
+</head>
+<body class="store-page">
+  <a class="skip-link" href="#catalog">跳转到商品 / Skip to merch</a>
+  <header class="site-header store-header">
+    <a class="brand-mark" href="./index.html"><img src="./assets/logo.jpg" alt="NATP"><span>NATP <small>STORE</small></span></a>
+    <nav class="store-nav" aria-label="Store navigation">
+      <a href="./index.html" data-i18n="website">乐队官网 ↗</a>
+      <button type="button" id="language" aria-label="Switch language">EN</button>
+      <button type="button" id="open-orders" data-i18n="orders">我的订单</button>
+      <button type="button" id="open-cart"><span data-i18n="cart">购物车</span> <span id="cart-count" class="count">0</span></button>
+    </nav>
+  </header>
+  <main>
+    <section class="store-hero">
+      <img class="store-hero-photo" src="./assets/hero-bridge.jpg" alt="" fetchpriority="high">
+      <div class="store-hero-copy">
+        <p class="eyebrow">NATP / OFFICIAL MERCH · XI’AN, CHINA</p>
+        <h1>WEAR<br>THE NOISE<span>.</span></h1>
+        <p class="store-slogan" data-i18n="slogan">穿透全世界，把现场穿在身上。</p>
+        <a class="button button-primary" href="#catalog" data-i18n="shop">探索周边 →</a>
+      </div>
+      <div class="store-hero-caption"><span>01 / FROM STAGE TO STREET</span><span>HARD ROCK. REAL PEOPLE.</span></div>
+    </section>
+    <div class="demo-strip" data-i18n="demo">数据库版商店 · 模拟付款，不扣款、不发货。请使用演示收货信息。</div>
+    <div class="demo-strip" id="connection" role="status"><span id="connection-message">正在连接商店数据库…</span> <button type="button" id="retry-connection" class="button button-secondary" data-i18n="retry">重新连接</button></div>
+    <section class="store-catalog" id="catalog" aria-labelledby="catalog-title">
+      <div class="catalog-heading"><div><p class="eyebrow">THE NATP COLLECTION</p><h2 id="catalog-title">ALL MERCH<span> / 周边</span></h2></div><p id="result-count" aria-live="polite"></p></div>
+      <div class="catalog-tools">
+        <div id="categories" class="categories" role="group" aria-label="Categories"></div>
+        <button class="filter-favorites" id="favorites-only" aria-pressed="false" data-i18n="favorites">只看收藏</button>
+      </div>
+      <div id="products" class="product-grid"></div>
+      <noscript><p>请开启 JavaScript 以查看商品和使用购物车。购物功能为本地演示。</p></noscript>
+    </section>
+    <section class="store-stage">
+      <div><p class="eyebrow">FROM THE STAGE</p><h2 data-i18n="stageTitle">不是背景音乐。<br>是一种态度。</h2><p data-i18n="stageCopy">用吉他啸叫掀翻屋顶，用鼓点砸碎沉闷。</p><a class="button button-secondary" href="./index.html#about" data-i18n="about">关于 NATP →</a></div>
+      <img src="./assets/live1.jpg" alt="NATP Live" loading="lazy">
+    </section>
+  </main>
+  <footer class="site-footer"><p>NATP / 内网穿透 · 穿透全世界</p><a href="./index.html">XI’AN, CHINA / BACK TO THE BAND ↗</a></footer>
+  <dialog id="store-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-top"><p class="eyebrow">NATP / MEMBER ACCESS</p><button type="button" id="close-dialog" aria-label="关闭 / Close">×</button></div>
+    <div id="dialog-content"></div>
+  </dialog>
+  <p id="toast" role="status" aria-live="polite"></p>
+  <script type="module" src="./shop.js"></script>
+</body>
+</html>
